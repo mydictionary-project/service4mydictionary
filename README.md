@@ -12,7 +12,7 @@ It is a module used for caching online query result for [MYDICTIONARY](https://g
 type ItemStruct struct {
 	QueryString  string   `json:"queryString"`
 	Word         string   `json:"word"`
-	Define       []string `json:"define"`
+	Definition   []string `json:"definition"`
 	Status       string   `json:"status"`
 	CreationTime int64    `json:"creationTime"`
 }
@@ -22,7 +22,7 @@ type ItemStruct struct {
 
 - `QueryString` indicates the string of query.
 - `Word` indicates the word.
-- `Define` indicates defines.
+- `Definition` indicates definitions.
 - `Status` indicates the status.
 - `CreationTime` is an unix timestamp which indicates when this item is created.
 

@@ -12,7 +12,7 @@
 type ItemStruct struct {
 	QueryString  string   `json:"queryString"`
 	Word         string   `json:"word"`
-	Define       []string `json:"define"`
+	Definition   []string `json:"definition"`
 	Status       string   `json:"status"`
 	CreationTime int64    `json:"creationTime"`
 }
@@ -22,7 +22,7 @@ type ItemStruct struct {
 
 - `QueryString`指示了查询字符串。
 - `Word`指示了词汇。
-- `Define`指示了释义。
+- `Definition`指示了释义。
 - `Status`指示了状态。
 - `CreationTime`是一个UNIX时间戳，它指示了本缓存项的创建时间。
 
