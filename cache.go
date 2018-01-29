@@ -1,4 +1,4 @@
-package cache4mydictionary
+package service4mydictionary
 
 import (
 	"encoding/json"
@@ -9,11 +9,20 @@ import (
 	"time"
 )
 
+// CacheItemStruct : item struct
+type CacheItemStruct struct {
+	QueryString  string   `json:"queryString"`
+	Word         string   `json:"word"`
+	Definition   []string `json:"definition"`
+	Status       string   `json:"status"`
+	CreationTime int64    `json:"creationTime"`
+}
+
 // CacheStruct : cache struct
 type CacheStruct struct {
 	path         string
 	shelfLifeDay int64
-	Content      []ItemStruct `json:"content"`
+	Content      []CacheItemStruct `json:"content"`
 }
 
 // Read : read cache
@@ -51,7 +60,7 @@ func (cache *CacheStruct) Read(path string, shelfLifeDay int64) (err error) {
 }
 
 // Query : query item in cache
-func (cache *CacheStruct) Query(queryString string) (item ItemStruct, err error) {
+func (cache *CacheStruct) Query(queryString string) (item CacheItemStruct, err error) {
 	for i := 0; i < len(cache.Content); i++ {
 		if strings.Compare(cache.Content[i].QueryString, queryString) == 0 {
 			item = cache.Content[i]
@@ -63,7 +72,7 @@ func (cache *CacheStruct) Query(queryString string) (item ItemStruct, err error)
 }
 
 // Add : add item to cache
-func (cache *CacheStruct) Add(item ItemStruct) {
+func (cache *CacheStruct) Add(item CacheItemStruct) {
 	cache.Content = append(cache.Content, item)
 }
 
