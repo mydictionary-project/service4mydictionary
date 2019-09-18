@@ -2,6 +2,8 @@
 
 [简体中文版](./README.zh-Hans.md)
 
+> The repo is a dependency of MYDICTIONARY which version is <= v3.0.0.
+
 ### 1. Introduction
 
 It is a module provides *services* with cache support for [MYDICTIONARY](https://github.com/zzc-tongji/mydictionary).

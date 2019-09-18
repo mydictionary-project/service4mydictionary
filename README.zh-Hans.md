@@ -2,6 +2,8 @@
 
 [English Version](./README.md)
 
+> 这个仓库是 MYDICTIONARY （版本 <= v3.0.0）的一个依赖。
+
 ### 1. 简介
 
 这是一个为[MYDICTIONARY](https://github.com/zzc-tongji/mydictionary/blob/master/README.zh-Hans.md)提供带有缓存支持的*在线服务*的模块。
